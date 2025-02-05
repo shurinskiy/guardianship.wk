@@ -1,0 +1,33 @@
+@use 'lib' as *;
+
+.card {
+	$self: &;
+	border-radius: var(--radius);
+	background-color: var(--cloud);
+	box-sizing: border-box;
+	padding: 26px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+
+	&__title {
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.6;
+		font-size: fluid(20px, 17px);
+	}
+
+	&__text {
+		font-size: 400px;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: fluid(17px, 15px);
+	}
+
+	&__button {
+
+	}
+}

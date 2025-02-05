@@ -1,0 +1,10 @@
+@use 'lib' as *;
+
+.title {
+	$self: &;
+	color: var(--text);
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	font-size: fluid(24px, 18px);
+}

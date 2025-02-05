@@ -21,28 +21,29 @@
 }
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 
-// @include font-face("Montserrat-ExtraLight", "MR", 200);
-// @include font-face("Montserrat-ExtraBold", "MR", 800);
-// @include font-face("Montserrat-SemiBold", "MR", 600);
-// @include font-face("Montserrat-Regular", "MR", 400);
-// @include font-face("Montserrat-Medium", "MR", 500);
-// @include font-face("Montserrat-Light", "MR", 300);
-// @include font-face("Montserrat-Black", "MR", 900);
-// @include font-face("Montserrat-Bold", "MR", 700);
-// @include font-face("Montserrat-Thin", "MR", 100);
+@include font-face("Montserrat-ExtraLight", "MR", 200);
+@include font-face("Montserrat-ExtraBold", "MR", 800);
+@include font-face("Montserrat-SemiBold", "MR", 600);
+@include font-face("Montserrat-Regular", "MR", 400);
+@include font-face("Montserrat-Medium", "MR", 500);
+@include font-face("Montserrat-Light", "MR", 300);
+@include font-face("Montserrat-Black", "MR", 900);
+@include font-face("Montserrat-Bold", "MR", 700);
+@include font-face("Montserrat-Thin", "MR", 100);
 
 // @import "../../node_modules/swiper/swiper";
 
 body, html {
 	// scrollbar-gutter: stable;
-	// scroll-behavior: smooth;	
+	scroll-behavior: smooth;	
 	box-sizing: border-box;
-	background-color: #fafafa;
+	background-color: #fff;
 	font-size: var(--size);
-	font-family: sans-serif;
+	font-family: "MR", sans-serif;
+	color: var(--text);
 	line-height: 1.2;
 	font-weight: 400;
 	min-height: 100vh;

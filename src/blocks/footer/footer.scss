@@ -1,0 +1,21 @@
+@use 'lib' as *;
+
+.footer {
+	$self: &;
+	padding-bottom: 70px;
+
+	&__inner {
+		text-align: center;
+		font-size: 15px;
+
+		p {
+			color: rgba(var(--text-rgb), 0.46);
+			margin-bottom: 18px;
+		}
+
+		a {
+			color: var(--blue);
+			font-weight: 500;
+		}
+	}
+}

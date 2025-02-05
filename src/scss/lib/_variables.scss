@@ -1,16 +1,24 @@
 :root {
+	--text: #364F5A;
+	--text-rgb: 54, 79, 90;
+
+	--accent: #FF4F66;
+	--cloud: #F1F8FF;
+	--blue: #3380EF;
+	--grey: #F7F7F7;
+	--sky: #DDEEFF;
+
+	--container: 1100px;
+	--radius: 20px;
 	--size: 16px;
-	--light: #FBF2DF;
-	--beige: #FBF2DF;
-	--text: #161C26;
-	--orange: #D69A37;
-	--green: #3DBE75;
-	--blue: #113859;
-	--blue-rgb: 17, 56, 89;
-	--container: 1400px;
 	--gap: 24px;
 	
+	@media screen and (max-width: 780px) {
+		--radius: 14px;
+	}
+	
 	@media screen and (max-width: 480px) {
+		--radius: 10px;
 		--gap: 16px;
 	}
 }

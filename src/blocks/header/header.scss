@@ -1,0 +1,36 @@
+@use 'lib' as *;
+
+.header {
+	$self: &;
+	padding: 25px 0;
+	background-color: var(--cloud);
+	border-bottom: 2px solid var(--sky);
+
+	&__inner {
+		display: flex;
+		align-items: center;
+
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__logo {
+		margin-right: auto;
+
+		@include media('<=xs') {
+			margin: 0 0 40px;
+		}
+	}
+
+	&__button {
+
+		&.button {
+			min-height: 60px;
+			
+			@include media('<=xs') {
+				min-height: 50px;
+			}
+		}
+	}
+}

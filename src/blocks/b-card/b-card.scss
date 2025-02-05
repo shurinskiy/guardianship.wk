@@ -1,0 +1,93 @@
+@use 'lib' as *;
+
+.b-card {
+	$self: &;
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	border-radius: var(--radius);
+	overflow: hidden;
+	background-color: var(--grey);
+	
+	@include media('<=xs') {
+		gap: 30px;
+	}
+	
+	@include media('<=xxs') {
+		gap: 20px;
+	}
+	
+	@include media('<=xxxs') {
+		gap: 16px;
+	}
+
+	&__image {
+		background: url('./images/trial.webp') center / cover no-repeat transparent;
+		padding: 16px;
+		width: 220px;
+		min-width: 180px;
+		display: flex;
+		align-items: center;
+		align-self: stretch;
+		justify-content: center;
+		
+		@include media('<=xxs') {
+			min-width: 140px;
+		}
+		
+		@include media('<=xxxs') {
+			min-width: 100px;
+		}
+
+		svg {
+			width: 120px;
+			height: 130px;
+			fill: #fff;
+			
+			@include media('<=xxs') {
+				width: 90px;
+				height: 100px;
+			}
+			
+			@include media('<=xxxs') {
+				width: 70px;
+				height: 80px;
+			}
+		}
+	}
+
+	&__side {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 20px;
+		padding: 28px 20px 28px 0;
+		
+		@include media('<=xxs') {
+			padding: 28px 16px 28px 0;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: fluid(20px, 17px);
+	}
+	
+	&__text {
+		max-width: 540px;
+		text-transform: uppercase;
+		font-size: fluid(18px, 14px);
+
+		@include media('<=xxxs') {
+			font-size: 13px;
+		}
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__button {
+
+	}
+}

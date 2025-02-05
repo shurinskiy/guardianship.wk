@@ -1,0 +1,106 @@
+@use 'lib' as *;
+
+.statistic {
+	$self: &;
+	padding: 70px 0 120px;
+	
+	@include media('<=xs') {
+		padding: 70px 0;
+	}
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 100px;
+		
+		@include media('<=sm') {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		
+		@include media('<=lg') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=md') {
+			grid-gap: 14px;
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+			grid-gap: 20px;
+		}
+		
+		@include media('<=xs') {
+			grid-gap: 12px;
+		}
+	}
+	
+	&__plates {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+		
+		@include media('<=md') {
+			grid-gap: 14px;
+		}
+		
+		@include media('<=sm') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=xs') {
+			grid-gap: 12px;
+		}
+	}
+
+	&__plate {
+		grid-column: span 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column nowrap;
+		background-color: var(--sky);
+		border-radius: var(--radius);
+		padding: 30px 16px;
+		
+		&:nth-child(3n + 1) {
+			background-color: var(--cloud);
+		}
+
+		strong {
+			margin-bottom: 16px;
+			font-weight: 600;
+			font-size: 23px;
+		}
+
+		span {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 13px;
+			
+			@include media('<=xs') {
+				font-size: 12px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 11px;
+			}
+		}
+	}
+
+	&__card {
+
+		&.card {
+			gap: 24px;
+		}
+	}
+}

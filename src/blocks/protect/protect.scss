@@ -1,0 +1,115 @@
+@use 'lib' as *;
+
+.protect {
+	$self: &;
+	padding: 75px 0;
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 55px;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 70px;
+		gap: 70px 20px;
+		
+		@include media('<=md') {
+			align-items: flex-start;
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__steps {
+		counter-reset: list_ctr;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 25px;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			min-height: 60px;
+			counter-increment: list_ctr;
+			color: var(--blue);
+			font-weight: 600;
+			font-size: fluid(24px, 16px);
+			
+			&::before {
+				content: counter(list_ctr)'.';
+				font-size: fluid(28px, 18px);
+			}
+			
+			span {
+				background-color: var(--cloud);
+				border-radius: var(--radius);
+				padding: 12px 20px;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	&__card {
+		max-width: 425px;
+
+		@include media('<=md') {
+			max-width: none;
+		}
+	}
+
+	&__plates {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 16px;
+		
+		@include media('<=xxs') {
+			grid-gap: 10px;
+		}
+	}
+
+	&__plate {
+		background-color: var(--cloud);
+		border-radius: var(--radius);
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-weight: 500;
+		font-size: 17px;
+		padding: 30px;
+		gap: 16px;
+		
+		@include media('<=sm') {
+			padding: 20px;
+			font-size: 16px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 12px;
+			font-size: 14px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 10px;
+			font-size: 13px;
+		}
+
+		svg {
+			width: 54px;
+			height: 54px;
+			fill: var(--blue);
+			
+			@include media('<=xxs') {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}

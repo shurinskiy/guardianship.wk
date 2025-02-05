@@ -1,0 +1,48 @@
+@use 'lib' as *;
+
+.logo {
+	$self: &;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--text);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+
+	@include media('<=xs') {
+		flex-flow: column nowrap;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 11px;
+		background-color: var(--blue);
+		
+		@include media('<=xs') {
+			border-radius: 8px;
+		}
+	
+		svg {
+			width: 44px;
+			height: 47px;
+			fill: #fff;
+		}
+	}
+
+	&__text {
+		line-height: 1.4;
+
+		@include media('<=xs') {
+			text-align: center;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@use 'lib' as *;
+
+.bottom {
+	$self: &;
+	padding: 70px 0 50px;
+
+	&__inner {
+
+	}
+
+	&__card {
+		margin-bottom: 45px;
+	}
+
+	&__plates {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 16px;
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__plate {
+		background-color: var(--cloud);
+		border-radius: var(--radius);
+		padding: 30px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-flow: column nowrap;
+		gap: 20px;
+	}
+
+	&__plate-title {
+		font-size: 17px;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__plate-navi {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 15px;
+		font-weight: 500;
+		gap: 8px;
+		margin-bottom: 16px;
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+
+		a {
+			flex-grow: 1;
+			color: var(--blue);
+		}
+	}
+
+	&__plate-button {
+
+	}
+
+	&__plate-text {
+		text-align: center;
+		font-size: 15px;
+		line-height: 1.1;
+
+		span {
+			font-weight: 600;
+		}
+	}
+}
